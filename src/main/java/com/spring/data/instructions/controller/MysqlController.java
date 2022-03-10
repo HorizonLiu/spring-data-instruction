@@ -1,5 +1,7 @@
-package com.spring.data.instructions.mysql;
+package com.spring.data.instructions.controller;
 
+import com.spring.data.instructions.mysql.CommonRequest;
+import com.spring.data.instructions.mysql.CommonResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -15,8 +17,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/{version}/mysql")
 public class MysqlController {
 
-    @Autowired
-    private RecordsRepository recordsRepository;
+//    @Autowired
+//    private RecordsRepository recordsRepository;
 
     @PostMapping(value = "/find", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public CommonResponseBody findByName(@PathVariable("version") String version,
@@ -25,10 +27,10 @@ public class MysqlController {
         Object resData = null;
         switch (request.getQueryOp()) {
             case "all":
-                resData = recordsRepository.findAll();
+//                resData = recordsRepository.findAll();
                 break;
             case "byId":
-                resData = recordsRepository.findById(request.getId()).orElse(null);
+//                resData = recordsRepository.findById(request.getId()).orElse(null);
                 break;
             default:
                 break;

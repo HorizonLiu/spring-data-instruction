@@ -1,0 +1,24 @@
+#server:
+#  port: 18082
+
+#logging:
+#  file: /Users/horizonliu/logs/spring.log
+#  level: debug
+
+# mongodb 配置
+spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/iov_account
+
+accountMongo:
+  uri: mongodb://127.0.0.1:27017/iov_account
+  # 连接mongodb的重要参数：用户名-密码-ip-端口号-数据库名-鉴权方式-admin权限
+#  uri: mongodb://mongouser:fca%402018@10.0.100.16:27017/iov_access?authMechanism=SCRAM-SHA-1&authSource=admin
+
+mongo:
+  accountMongo:
+    uri: mongodb://127.0.0.1:27017/iov_account
+    # 连接mongodb的重要参数：用户名-密码-ip-端口号-数据库名-鉴权方式-admin权限
+    # uri: mongodb://mongouser:fca%402018@10.0.100.16:27017/iov_access?authMechanism=SCRAM-SHA-1&authSource=admin
+  enable-account: true

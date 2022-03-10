@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 
 import javax.persistence.*;
 
@@ -19,6 +20,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "person")
+@ConditionalOnBean(EnableMysqlConfig.class)
 public class Records {
     /**
      * 声明主键，自动增长

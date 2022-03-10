@@ -1,9 +1,9 @@
 package com.spring.data.instructions.mysql;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+        import lombok.AllArgsConstructor;
+        import lombok.Builder;
+        import lombok.Data;
+        import lombok.NoArgsConstructor;
 
 /**
  * 响应基本类
@@ -18,4 +18,8 @@ public class CommonResponseBody {
     private int code;
     private String msg;
     private Object data;
+
+    public CommonResponseBody(Object data) {
+        this.data = data;
+    }
 }
